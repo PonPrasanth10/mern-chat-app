@@ -17,19 +17,22 @@ export const useAuthStore = create((set,get) => ({
     checkAuth: async () => {
         try {
             const res = await axiosInstance.get("/auth/check");
-            console.log("Auth check response:", res.data); // Debugging
-            set({ authUser: res.data });
-
+            console.log("Auth check response:", res.data);
+            
             if (res.data) {
-                get().connectSocket();  // 🔹 Reconnect the socket after checking auth
+                set({ authUser: res.data });
+                localStorage.setItem("authUser", JSON.stringify(res.data)); // Store in localStorage
+                get().connectSocket();
             }
         } catch (error) {
             console.log("Error in checkAuth store: ", error?.message);
             set({ authUser: null });
+            localStorage.removeItem("authUser"); // Clear on error
         } finally {
             set({ isCheckingAuth: false });
         }
     },
+   
 
     signup: async (data) => {
         set({ isSigningUp: true });
@@ -52,14 +55,16 @@ export const useAuthStore = create((set,get) => ({
     login: async(data) => {
         set({isLoggingIn:true})
         try {
-            const res = await axiosInstance.post("/auth/login",data)
-            set({authUser:res.data})
+            const res = await axiosInstance.post("/auth/login",data);
+            set({authUser: res.data});
+            console.log(authUser)
             toast.success("Logged in successfully");
             get().connectSocket();
+   
+            // Force re-render to ensure state updates correctly
+            window.location.reload();  
         } catch (error) {
             console.error("Login error:", error);
-
-            // Ensure error.response exists before accessing properties
             const errorMessage = error.response?.data?.message || "Login failed. Please try again.";
             toast.error(errorMessage);
         }
@@ -67,6 +72,7 @@ export const useAuthStore = create((set,get) => ({
             set({isLoggingIn:false})
         }
     },
+   
     updateProfile: async(data) => {
       set({isUpdatingProfile:true})
       try {
