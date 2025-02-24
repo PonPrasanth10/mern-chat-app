@@ -77,22 +77,28 @@ export const useChatStore = create((set,get) => ({
         socket.off("newMessage");
 
     },
-    deleteMessage: async(messageId) => {
+    deleteMessage: async (messageId) => {
         try {
             await axiosInstance.delete(`/messages/${messageId}`); // API call to delete message
     
-            const updatedMessages = Array.isArray(get().messages)
-                ? get().messages.filter((msg) => msg._id !== messageId)
-                : [];
-
+            // Ensure `messages` is always an array
+            const messages = get().messages || []; 
+            if (!Array.isArray(messages)) {
+                console.error("Error: messages is not an array!", messages);
+                return;
+            }
+    
+            // Filter out the deleted message
+            const updatedMessages = messages.filter((msg) => msg._id !== messageId);
             set({ messages: updatedMessages });
     
             // Emit delete event to other clients
             useAuthStore.getState().socket.emit("deleteMessage", messageId);
         } catch (error) {
+            console.error("Delete Message Error:", error.response?.data || error.message);
             toast.error(error.response?.data?.message || "Failed to delete message");
         }
-    },
+    },    
     
     
     
