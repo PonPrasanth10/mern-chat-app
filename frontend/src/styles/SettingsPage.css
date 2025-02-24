@@ -1,0 +1,42 @@
+.aboutme-background{
+    overflow: hidden;
+    background: url("/galaxy-night-landscape.jpg");
+    
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+width: 100vw;
+}
+.aboutme-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    width: 500px;
+    border-radius: 10px;
+    color: #d5d9df;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Soft white shadow */
+    padding: 10px;
+
+}
+.aboutme-container-center
+{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutme-des{
+    line-height: 1.8; /* Adjusts the spacing between lines */
+    word-spacing: 2px; /* Adjusts the spacing between words */
+    text-align: center;
+}
+.aboutme-title{
+    font-size: 35px;
+    padding: 0;
+    margin: 18px;
+}

@@ -1,0 +1,120 @@
+
+
+
+.profile-background{
+    overflow: hidden;
+    background: url("/galaxy-night-landscape.jpg");
+    
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+width: 100vw;
+}
+
+
+.profile-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    width: 500px;
+    border-radius: 10px;
+    color: #d5d9df;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Soft white shadow */
+    padding: 10px;
+
+}
+.profile-container-center
+{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d5d9df;
+}
+.file-input-container{
+    position: absolute; 
+    bottom: 10px;        
+    right: 5px;         
+    cursor: pointer; 
+    
+}
+.camera-icon-wrapper {
+    background-color: #ffffff;  /* White background color */
+    padding: 5px;               /* Adjust padding as needed */
+    border-radius: 50%;         /* Creates a circular background */
+    display: inline-flex;       /* Ensures proper alignment */
+    align-items: center;        /* Center the icon vertically */
+    justify-content: center;    /* Center the icon horizontally */
+    border: 2px solid #d5d9df;
+}
+.profile-file-input{
+    position: absolute;
+    
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  /* Hide the input */
+    cursor: pointer; /* Ensures clicking on CameraIcon triggers file selection */
+}
+.profile-title{
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+.profile-des{
+    margin: 5px;
+    padding: 5px;
+}
+.image-container{
+    position: relative; /* Changed from absolute to relative */
+    display: inline-block; /* Optional: keeps the image size tight */
+
+}
+
+.imageinfo{
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.profile-details{
+    display: flex;
+    flex-direction: column;   /* Arrange each detail vertically */
+  align-items: center;  /* Left-align text */
+  width: 90%;
+   margin: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+.acc-status{
+    font-weight: 600;
+}

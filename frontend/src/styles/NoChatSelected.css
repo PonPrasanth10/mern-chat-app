@@ -1,0 +1,14 @@
+.nochat-background{
+    width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.nochat-title{
+    text-align: center;
+}
+.nochat-p{
+    text-align: center;
+}

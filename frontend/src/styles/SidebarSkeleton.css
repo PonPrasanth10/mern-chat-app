@@ -1,0 +1,119 @@
+/* Sidebar Container */
+.sidebar {
+    height: 100vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.2s ease-in-out;
+    overflow: hidden;
+  }
+  
+  @media (min-width: 1024px) {
+    .sidebar {
+      width: 200px;
+      
+      overflow: hidden;
+    }
+  }
+  
+  /* Header */
+  .sidebar-header {
+    border-bottom: 1px solid #d1d5db;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .header-text {
+    font-weight: 500;
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .header-text {
+      display: block;
+    }
+  }
+  
+  /* Skeleton Contacts */
+  .skeleton-contacts {
+    overflow-y: auto;
+    width: 80%;
+    padding: 15px 0;
+    
+    overflow: hidden;
+  }
+  
+  .skeleton-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  /* Avatar Skeleton */
+  .skeleton-avatar {
+    position: relative;
+    margin: auto;
+  }
+  
+  .skeleton.circle {
+    width: 48px;
+    height: 48px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  /* User Info Skeleton */
+  .skeleton-info {
+    display: none;
+    flex: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    .skeleton-info {
+      display: block;
+    }
+  }
+  
+  .skeleton.line {
+    background: #e0e0e0;
+    border-radius: 5px;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  .skeleton.large {
+    height: 16px;
+    width: 130px;
+    margin-bottom: 6px;
+  }
+  
+  .skeleton.small {
+    height: 12px;
+    width: 80px;
+  }
+  
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-color: #f0f0f0;
+    }
+    50% {
+      background-color: #e0e0e0;
+    }
+    100% {
+      background-color: #f0f0f0;
+    }
+  }
+  

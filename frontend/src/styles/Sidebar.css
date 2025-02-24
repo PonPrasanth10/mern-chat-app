@@ -1,0 +1,103 @@
+/* Sidebar Background */
+.sidebar-background {
+  width: 240px; /* Ensure fixed width */
+  min-width: 240px; /* Prevent expansion */
+  height: 100%;
+  background-color: transparent;
+    backdrop-filter: blur(5px);
+  border-right: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Prevents sidebar from expanding */
+  overflow-y: auto;
+scrollbar-width: thin;
+
+    
+  }
+  
+  /* Sidebar Title */
+  .sidebar-title {
+    border-bottom: 1px solid #d1d5db;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  
+  /* Users List Container */
+  .users-list-div {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+    width: 250px;
+    
+    
+  }
+  
+  /* ---------------- Skeleton Styles ---------------- */
+  
+  /* Skeleton Base */
+  .skeleton {
+    background: linear-gradient(90deg, #e5e7eb 25%, #d1d5db 50%, #e5e7eb 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  /* Avatar Skeleton */
+  .skeleton-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
+  /* Text Skeleton */
+  .skeleton-text {
+    height: 14px;
+    width: 60%;
+    margin: 4px 0;
+  }
+  
+  /* Full Width Skeleton */
+  .skeleton-full {
+    height: 32px;
+    width: 100%;
+  }
+  
+  /* Skeleton Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+
+  /* Custom Scrollbar */
+.users-list-div::-webkit-scrollbar {
+  width: 6px; /* Scrollbar width */
+}
+
+.users-list-div::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Track color */
+  border-radius: 6px;
+}
+
+.users-list-div::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* Scroll thumb color */
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.users-list-div::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db; /* Darker color on hover */
+}

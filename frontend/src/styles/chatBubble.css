@@ -1,0 +1,163 @@
+/* Chat container */
+.cm-chat-container {
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    height: 100vh; /* Ensures it doesn't grow beyond viewport */
+    max-width: 800px; /* Keep the chat width fixed */
+    overflow: hidden; /* Prevents expansion */
+  }
+  
+  /* Loading state */
+  .cm-loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  /* Messages wrapper */
+  .cm-messages-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: calc(75vh - 140px); /* Prevents it from growing infinitely */
+  }
+  
+  /* Chat bubble container */
+  .cm-chat-bubble-container {
+    display: flex;
+    align-items: flex-end;
+    max-width: 75%;
+  }
+  
+  .sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+  
+  .received {
+    align-self: flex-start;
+  }
+  
+  /* Avatar */
+  .cm-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px;
+  }
+  
+  .cm-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Chat bubble */
+  .cm-chat-bubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sent message (Right-aligned) */
+  .sent .cm-chat-bubble {
+    background: #404040;
+    color: white;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Received message (Left-aligned) */
+  .received .cm-chat-bubble {
+    background: #404040;
+    color: #e0e0e0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Message image */
+  .cm-message-image {
+    max-width: 150px;
+    max-width: 200px; /* Prevents large images from expanding the container */
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Message time */
+  .cm-message-time {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 5px;
+    text-align: right;
+  }
+.mi-pos{
+    position: fixed;
+    bottom: 5px;
+    width: 56%;
+}
+
+.cm-messages-wrapper::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+  }
+  
+  .cm-messages-wrapper::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Track color */
+    
+  }
+  
+  .cm-messages-wrapper::-webkit-scrollbar-thumb {
+    background: #d1d5db; /* Scroll thumb color */
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .cm-messages-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db; /* Darker color on hover */
+  }
+
+  .cc-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Centering in full viewport */
+  }
+  
+  .cc-loading-icon {
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    color: #d1d5db; /* Adjust color */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .cm-delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #d1d5db;
+    margin-left: 8px;
+    padding: 0;
+    text-align: end;
+}
+.cm-delete-btn:hover {
+    color: red;
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.kanit-medium {
+    font-family: "Kanit", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+.body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background-login{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -10;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+
+
+
+
+  .login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:30dvw;
+    height:50dvh;
+    
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+
+    background: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    
+}
+.login{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+    font-family: "Kanit", serif;
+    font-style: normal;
+    color: black;
+}
+  
+input[type="email"],
+input[type="password"] {
+    width: 80%; /* Adjust width as needed */
+    padding: 5px 15px; /* Comfortable padding */
+   
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-family: "Kanit", serif; /* Consistent font */
+    font-weight: 300; /* Medium weight */
+    font-size: 16px; /* Readable font size */
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    backdrop-filter: blur(2px); /* Slight blur for glass effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+
+.login-button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+    background: #2c2c2c;
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+ font-size: 16px;
+ font-weight: 600;
+}
+
+.login-button:hover {
+  background: #3a3a3a;
+}
+
+.li-button-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-label
+{
+  font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+ margin: 5px;   
+ color: black;
+}
+
+.password-label
+{
+  font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+ margin: 5px;   
+ color: black;
+}

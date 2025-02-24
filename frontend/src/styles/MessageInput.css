@@ -1,0 +1,153 @@
+.message-input-container {
+    
+    padding: 20px;
+    width: 760px;
+    background-color: transparent;
+  }
+  
+  .mi-image-preview-container {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .mi-image-wrapper {
+    position: relative;
+  }
+  
+  .mi-preview-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid whitesmoke;
+  }
+  
+  .mi-remove-image-btn {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #2c2c2c;
+    font-size: 60px;
+    padding: 0; /* Ensure no extra padding */
+    overflow: visible; /* Allow icon to exceed button size */
+  }
+  .mi-remove-image-btn svg { /* Targeting the icon inside the button */
+    width: 12px !important;  /* Bigger icon */
+    height: 12px !important;
+    position: absolute;
+}
+  
+  
+  .mi-message-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .mi-input-group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .mi-message-input {
+    flex: 0 0 90%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Container to hide the input behind the button */
+  .mi-file-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 5%; /* Keep a balanced width */
+    position: relative;
+  }
+  .mi-upload-btn svg {
+    width: 30px !important;  /* Adjust size */
+    height: 30px !important;
+    color: #d1d2d5; /* Ensure correct icon color */
+  }
+  .mi-send-btn-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 0 0 5%;
+  }
+  
+  /* Fully hidden file input */
+  .mi-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .mi-upload-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;  /* Adjust width */
+    height: 40px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-in-out;
+    padding: 0;
+    position: relative; /* Needed for alignment */
+  }
+  
+ 
+  
+  .mi-send-btn {
+    background: #007bff;
+    border: none;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    width: 40px; /* Slightly increased */
+    height: 40px;
+    padding: 5px;
+  }
+  
+  .mi-send-btn svg {
+    color: white; /* Ensure icon is white */
+  }
+  
+  .mi-send-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Adjust alignment of button div */
+  .mi-send-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  

@@ -1,0 +1,177 @@
+/* Sidebar Container */
+.user-list {
+  height: 100%;
+  width: 230px; /* Fixed width */
+  min-width: 230px; /* Ensures it never expands */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden; /* ✅ Prevents horizontal scrolling */
+  background: transparent;
+  border-right: 1px solid #d1d5db;
+  flex-shrink: 0;
+  
+}
+
+/* Sidebar Background */
+.sidebar-background {
+  width: 200px;
+  min-width: 200px;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border-right: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow-x: hidden; /* ✅ Ensures no horizontal scrolling */
+  overflow-y:auto ;
+}
+
+/* User Button */
+.user-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 30px;
+  gap: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  color: white;
+  margin-top: 10px;
+  border: none;
+}
+
+/* Selected User */
+.user-button.selected {
+  background: #e5e7eb;
+  border-left: 2px solid #6366f1;
+  color: black;
+  border: none;
+}
+.user-button.selected .user-name {
+  color: #1f2937; /* Set your preferred color, dark gray */
+}
+.user-button.selected .indicator-text {
+  color: #1f2937; /* Set your preferred color, dark gray */
+}
+
+/* Avatar */
+.avatar-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: block;
+  flex-grow: 1;
+  overflow: hidden;
+  font-weight: 500;
+  
+}
+
+.user-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  
+}
+.indicator-text{
+  font-weight: 400;
+  color: #d1d2d5;
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: left;
+  overflow: hidden;
+}
+
+
+
+
+/* Users List Container */
+.users-list-div {
+  overflow-y: auto;
+  overflow-x: hidden; /* ✅ Prevents horizontal scrolling */
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: 2px;   /* Adjust placement */
+  right: 2px;
+  width: 10px;   /* Size of indicator */
+  height: 10px;
+  background-color: #00c853;  /* Green color */
+  border: 2px solid white;  /* White border to separate from image */
+  border-radius: 50%;
+}
+
+
+ /* Custom Scrollbar */
+ .user-list::-webkit-scrollbar {
+  width: 6px; /* Scrollbar width */
+}
+
+.user-list::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Track color */
+  border-radius: 6px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* Scroll thumb color */
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.user-list::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db; /* Darker color on hover */
+}
+
+/* Checkbox Container */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: auto; /* Push checkbox to the right */
+}
+
+/* Style for checkbox input */
+.toggle-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #4caf50; /* Green color for checkbox */
+}
+
+/* Hover effect */
+.toggle-label:hover {
+  color: #a1f7a1;
+}

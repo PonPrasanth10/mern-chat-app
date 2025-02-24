@@ -1,0 +1,75 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ background-color: transparent;
+  color: #d5d9df;
+  border-radius: 10px;
+  
+}
+.settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.navbar-title{
+  padding-left: 5px;
+  padding-right: 5px ;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  font-weight: 900 !important;
+  
+}
+.navbar-title-h2{
+  font-size: 25px;
+  font-weight: 900 !important;
+  color: #d5d9df;
+
+}
+.nav-link-title:hover {
+  color: #d5d9df ; /* or any color you want */
+  cursor: pointer;
+}
+
+.nav-link-title{
+  text-decoration: none !important; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: default; /* Disable pointer cursor */
+  font-weight: 800 !important;
+  
+}
+.nav-link{
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  
+
+}
+.nav-link:hover{
+  color: #d5d9df;
+}
+.nav-settings{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+.nav-logout{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
