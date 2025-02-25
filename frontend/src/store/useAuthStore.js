@@ -16,7 +16,7 @@ export const useAuthStore = create((set,get) => ({
 
     checkAuth: async () => {
         try {
-            const res = await axiosInstance.get("/auth/check");
+            const res = await axiosInstance.get("/auth/check", {withCredentials:true});
             console.log("Auth check response:", res.data);
             
             if (res.data) {
@@ -57,7 +57,7 @@ export const useAuthStore = create((set,get) => ({
         try {
             const res = await axiosInstance.post("/auth/login",data);
             set({authUser: res.data});
-            console.log(authUser)
+            console.log(get().authUser); // ✅ Corrected 
             toast.success("Logged in successfully");
             get().connectSocket();
    
