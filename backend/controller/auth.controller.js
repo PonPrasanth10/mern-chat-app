@@ -34,7 +34,8 @@ export const signup = async(req,res) => {
         if(newUser){
             // generate jwt token
 
-            generatetoken(newUser._id,res);
+            const token = await generatetoken(newUser._id, res);
+            console.log("Generated Token:", token);
             await newUser.save()
 
             res.status(201).json({
@@ -71,7 +72,8 @@ export const login = async(req,res) => {
        return res.status(400).json({message : "Invalid credentials"})
     }
     
-    generatetoken(user._id,res)
+    const token = await generatetoken(user._id, res);
+    console.log("Generated Token:", token);
 
     res.status(200).json({
         _id:user._id,
