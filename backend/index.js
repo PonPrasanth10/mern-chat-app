@@ -29,7 +29,7 @@ if(process.env.NODE_ENV==="production"){
 }
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173","https://mern-chat-app-4m3r.onrender.com"],
     credentials:true,
 }))
 app.use(cookieParser())
