@@ -14,9 +14,9 @@ export const ChatContainer = () => {
     getMessages,
     isMessagesLoading,
     selectedUser,
-    unSubscribeFromMessages,
+    unsubscribeFromMessages,
     subscribeToMessages,
-    deleteMessage,
+
   } = useChatStore();
   const { authUser } = useAuthStore();
   const messageEndRef = useRef(null);
@@ -25,9 +25,9 @@ export const ChatContainer = () => {
     getMessages(selectedUser._id);
     subscribeToMessages();
     return () => {
-      unSubscribeFromMessages();
+      unsubscribeFromMessages();
     };
-  }, [selectedUser._id, getMessages, subscribeToMessages, unSubscribeFromMessages]);
+  }, [selectedUser._id, getMessages, subscribeToMessages, unsubscribeFromMessages]);
 
   useEffect(() => {
     if (messageEndRef.current && messages) {
@@ -64,11 +64,11 @@ export const ChatContainer = () => {
                   {message.image && <img src={message.image} alt="Attachment" className="cm-message-image" />}
                   {message.text && <p>{message.text}</p>}
                   <span className="cm-message-time">{new Date(message.createdAt).toLocaleTimeString()}
-                  {isSentByUser && (
+                  {/* {isSentByUser && (
                     <button className="cm-delete-btn" onClick={() => deleteMessage(message._id)}>
                         <Trash size={16} />
                     </button>
-                )}
+                )} */}
                   </span>
                   
 
