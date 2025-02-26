@@ -10,8 +10,7 @@ const ProfilePage = () => {
   const {authUser,isUpdatingProfile,updateProfile} = useAuthStore()
   const [selectedImg,setSelectedImg] = useState(null)
 
-  console.log("authUser:", authUser);
-  console.log("Has createdAt:", authUser?.createdAt ? "Yes" : "No");
+  
 
   const handleImageUpload = (e) => {
     const file=e.target.files[0]
