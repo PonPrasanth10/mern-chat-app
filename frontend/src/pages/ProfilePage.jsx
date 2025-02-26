@@ -62,7 +62,14 @@ const ProfilePage = () => {
     <span>Email :</span> <span>{authUser?.email}</span>
   </p>
   <p className="profile-info">
-    <span>Member since :</span> {authUser?.createdAt ? new Date(authUser.createdAt).toLocaleDateString() : "N/A"}
+    <span>Member since: </span> 
+    {authUser && authUser.createdAt
+        ? new Date(authUser.createdAt).toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        })
+        : "N/A"}
 </p>
 
   <p className="profile-info">

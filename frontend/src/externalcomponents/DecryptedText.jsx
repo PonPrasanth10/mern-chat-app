@@ -5,6 +5,12 @@ const styles = {
   wrapper: {
     display: 'inline-block',
     whiteSpace: 'pre-line',
+    color: 'black',
+    minWidth: '300px',
+    maxWidth: '100%',
+    minHeight: '150px',
+    maxHeight: 'auto',
+    overflowWrap: 'break-word', // Ensures text wraps properly
   },
   srOnly: {
     position: 'absolute',
