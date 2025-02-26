@@ -63,12 +63,12 @@ const ProfilePage = () => {
   </p>
   <p className="profile-info">
     <span>Member since: </span> 
-    {authUser && authUser.createdAt
-        ? new Date(authUser.createdAt).toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-        })
+    {authUser?.createdAt
+        ? `${new Date(authUser.createdAt).toLocaleDateString()} at ${new Date(authUser.createdAt).toLocaleTimeString("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          })}`
         : "N/A"}
 </p>
 
